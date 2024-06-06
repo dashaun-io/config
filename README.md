@@ -30,13 +30,13 @@ Distributed under the Apache License, Version 2.0. See `LICENSE` for more inform
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/dashaun/io.dashaun.config.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/dashaun-io/io.dashaun.config.svg?style=for-the-badge
 [contributors-url]: https://github.com/dashaun-io/io.dashaun.config/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/dashaun/io.dashaun.config.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/dashaun-io/io.dashaun.config.svg?style=for-the-badge
 [forks-url]: https://github.com/dashaun-io/io.dashaun.config/network/members
-[stars-shield]: https://img.shields.io/github/stars/dashaun/io.dashaun.config.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/dashaun-io/io.dashaun.config.svg?style=for-the-badge
 [stars-url]: https://github.com/dashaun-io/io.dashaun.config/stargazers
-[issues-shield]: https://img.shields.io/github/issues/dashaun/io.dashaun.config.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/dashaun-io/io.dashaun.config.svg?style=for-the-badge
 [issues-url]: https://github.com/dashaun-io/io.dashaun.config/issues
-[license-shield]: https://img.shields.io/github/license/dashaun/io.dashaun.config.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/dashaun-io/io.dashaun.config.svg?style=for-the-badge
 [license-url]: https://github.com/dashaun-io/io.dashaun.config/blob/master/LICENSE.txt
