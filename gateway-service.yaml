@@ -1,0 +1,39 @@
+spring:
+  jmx:
+    enabled: false
+  cloud:
+    gateway:
+      routes:
+        - id: insights
+          uri: http://localhost:8081
+          predicates:
+            - Path=/insights/**
+          filters:
+            - RewritePath=/insights/(?<segment>.*), /$\{segment}
+        - id: zipkin
+          uri: http://openzipkin.dashaun-io.svc.cluster.local:9411
+          predicates:
+            - Path=/zipkin/**
+        - id: concourse
+          uri: http://concourse-web.concourse.svc.cluster.local:8080
+          predicates:
+            - Path=/concourse/**
+        - id: root
+          uri: https://javagrunt.github.io
+          predicates:
+            - Path=/**
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      password: ${REDIS_PASSWORD:}
+      port: ${REDIS_PORT:6379}
+      username: ${REDIS_USERNAME:}
+  main:
+    web-application-type: reactive
+  threads:
+    virtual:
+      enabled: true
+management:
+  endpoint:
+    gateway:
+      enabled: true
