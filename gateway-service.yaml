@@ -19,7 +19,8 @@ spring:
           predicates:
             - Path=/concourse/**
           filters:
-            - RewritePath=/concourse/(?<segment>.*), /$\{segment}
+            - RewritePath=/concourse/(?<segment>.*), $\{segment}
+            - RewriteLocationResponseHeader=AS_IN_REQUEST, Location, ,
         - id: root
           uri: https://javagrunt.github.io
           predicates:
