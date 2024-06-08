@@ -14,9 +14,6 @@ spring:
           uri: http://openzipkin.dashaun-io.svc.cluster.local:9411
           predicates:
             - Path=/zipkin/**
-        - id: public
-          predicates:
-            - Path=/public/**
         - id: root
           uri: https://javagrunt.github.io
           predicates:
