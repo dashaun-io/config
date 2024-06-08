@@ -17,12 +17,6 @@ spring:
         - id: public
           predicates:
             - Path=/public/**
-        - id: concourse
-          uri: http://concourse-web.concourse.svc.cluster.local:8080
-          predicates:
-            - Path=/concourse/**
-          filters:
-            - RewritePath=/concourse/(?<segment>.*), /$\{segment}
         - id: root
           uri: https://javagrunt.github.io
           predicates:
