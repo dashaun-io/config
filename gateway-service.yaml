@@ -18,9 +18,13 @@ spring:
           uri: http://concourse-web.concourse.svc.cluster.local:8080
           predicates:
             - Path=/concourse/**
-            - Path=/public/**
           filters:
             - RewritePath=/concourse/(?<segment>.*), /$\{segment}
+        - id: public
+          uri: http://concourse-web.concourse.svc.cluster.local:8080
+          predicates:
+            - Path=/public/**
+          filters:
             - RewritePath=/public/(?<segment>.*), /$\{segment}
         - id: root
           uri: https://javagrunt.github.io
