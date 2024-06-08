@@ -14,18 +14,15 @@ spring:
           uri: http://openzipkin.dashaun-io.svc.cluster.local:9411
           predicates:
             - Path=/zipkin/**
+        - id: public
+          predicates:
+            - Path=/public/**
         - id: concourse
           uri: http://concourse-web.concourse.svc.cluster.local:8080
           predicates:
             - Path=/concourse/**
           filters:
             - RewritePath=/concourse/(?<segment>.*), /$\{segment}
-        - id: public
-          uri: http://concourse-web.concourse.svc.cluster.local:8080
-          predicates:
-            - Path=/public/**
-          filters:
-            - RewritePath=/public/(?<segment>.*), /$\{segment}
         - id: root
           uri: https://javagrunt.github.io
           predicates:
