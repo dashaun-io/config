@@ -9,7 +9,7 @@ spring:
           predicates:
             - Path=/insights/**
           filters:
-            - RewritePath=/insights/(?<segment>.*), /$\{segment}
+            - RewritePath=/insights/(?<segment>.*), $\{segment}
         - id: zipkin
           uri: http://openzipkin.dashaun-io.svc.cluster.local:9411
           predicates:
@@ -17,7 +17,9 @@ spring:
         - id: concourse
           uri: http://concourse-web.concourse.svc.cluster.local:8080
           predicates:
-            - Host=concourse.dashaun.io
+            - Path=/concourse/**
+          filters:
+            - RewritePath=/concourse/(?<segment>.*), /$\{segment}
         - id: root
           uri: https://javagrunt.github.io
           predicates:
